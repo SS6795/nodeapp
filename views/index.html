@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Upload Images to Server</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div type="hidden" id="status" class="invisible"><%= errormessage %></div>
+
+
+<h2>Upload GOV-ID</h2>
+<form action="/uploadID" method="post" enctype="multipart/form-data">
+        <input type="file" accept="image/*" name="ID" >
+        <input type="submit" value="upload">
+</form>
+</body>
+<script>
+      if($('div#status').text()!='')
+      {
+                alert($('div#status').text());
+      }
+</script>
+</html>
